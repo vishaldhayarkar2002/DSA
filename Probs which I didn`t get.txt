@@ -1,0 +1,1 @@
+1.K-th digit in 'a' raised to power 'b'
