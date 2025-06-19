@@ -1,1 +1,11 @@
 1.K-th digit in 'a' raised to power 'b'
+
+trick
+1.(ab) mod p = ( (a mod p) (b mod p) ) mod p
+] Binary Exponentiation Method
+Binary exponentiation is a method to compute large powers efficiently using the properties of binary representation. Instead of multiplying the base repeatedly, it breaks the exponent down into powers of 2. Since every number can be represented as a sum of powers of 2, we can use only the set bits (1s) in the binary form of the exponent to determine which multiplications are necessary.
+
+(ab) mod p = ( (a mod p) (b mod p) ) mod p
+
+For example, if we want to compute 310, we express 10 in binary as 1010. This means 310 can be rewritten as 38×32, skipping unnecessary calculations. 
+Similarly, for 319, where 19 is 10011 in binary, the exponentiation is reduced to 316×32×31.
