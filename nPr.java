@@ -17,7 +17,6 @@ public class GfG {
         return fact(n) / fact(n - r);
     }
 
-    // Driver code
     public static void main(String[] args)
     {
         int n = 5;
