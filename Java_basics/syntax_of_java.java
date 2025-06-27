@@ -40,3 +40,19 @@ int[] myNum = {10, 20, 30, 40};
 
 int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
 System.out.println(myNumbers[1][2]); // Outputs 7
+
+// Throw an exception if age is below 18 (print "Access denied"). If age is 18 or older, print "Access granted":
+public class Main {
+  static void checkAge(int age) {
+    if (age < 18) {
+      throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+    }
+    else {
+      System.out.println("Access granted - You are old enough!");
+    }
+  }
+
+  public static void main(String[] args) {
+    checkAge(15); // Set age to 15 (which is below 18...)
+  }
+}
