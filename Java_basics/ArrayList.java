@@ -83,3 +83,22 @@ public class ArrayListDSADemo {
         System.out.println("After clear(): " + list);
     }
 }
+
+// 1. Simple for loop
+for(int i=0; i<numbers.size(); i++) {
+    System.out.println(numbers.get(i));
+}
+
+// 2. Enhanced for loop (best for most DSA problems)
+for(int num : numbers) {
+    System.out.println(num);
+}
+
+// 3. forEach + lambda (Java 8+)
+numbers.forEach(num -> System.out.println(num));
+
+// 4. Iterator (useful when removing while iterating)
+Iterator<Integer> it = numbers.iterator();
+while(it.hasNext()) {
+    System.out.println(it.next());
+}

@@ -23,13 +23,13 @@ public class BidirectionalTraversal {
 }
 
 
-Key Methods of ListIterator:
-hasNext() → checks if there’s a next element.
+// Key Methods of ListIterator:
+// hasNext() → checks if there’s a next element.
 
-next() → moves forward and returns the element.
+// next() → moves forward and returns the element.
 
-hasPrevious() → checks if there’s a previous element.
+// hasPrevious() → checks if there’s a previous element.
 
-previous() → moves backward and returns the element.
+// previous() → moves backward and returns the element.
 
-nextIndex() / previousIndex() → gives the current index.
+// nextIndex() / previousIndex() → gives the current index.
