@@ -1,0 +1,19 @@
+Understanding the difference between Comparable and Comparator is crucial for sorting objects in Java. Let me break it down with clear examples and practical DSA applications.
+
+Core Differences at a Glance
+Feature	Comparable	Comparator
+Package	java.lang	java.util
+Method	compareTo()	compare()
+Sorting Logic	Natural ordering	Custom ordering
+Implementation	Inside the class	Separate class/lambda
+Number of Sequences	Single sorting sequence	Multiple sorting sequences
+Modifies Class	Yes	No
+
+Key Technical Differences
+Method Signature:
+
+Comparable: public int compareTo(T o)
+
+Comparator: public int compare(T o1, T o2)
+
+Prefer ArrayDeque for better performance in single-threaded apps for Stack Implementation
