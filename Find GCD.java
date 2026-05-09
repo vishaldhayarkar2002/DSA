@@ -18,3 +18,6 @@ class Test
         System.out.println("GCD of " + a +" and " + b + " is " + gcd(a, b));
     }
 }
+int num = 5, den = 2;
+double result = num / den;  // 2.0 (wrong: 5/2 = 2 in int)
+double correct = (1.0 * num) / den;  // 2.5 (right)
