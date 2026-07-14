@@ -12,7 +12,7 @@ class Solution(object):
             dp[i] = max(nums[i] + dp[i-2], dp[i-1])
 
         return dp[-1]
-            
+
 class Solution(object):
     def partitionLabels(self, s):
         last = {c: i for i, c in enumerate(s)}
@@ -30,3 +30,21 @@ class Solution(object):
 
         return result
         
+class Solution:
+    def coinChange(self, coins, amount):
+        # dp[i] = min coins to make amount i
+        dp = [float('inf')] * (amount + 1)
+        
+        dp[0] = 0  # base case
+        
+        for i in range(1, amount + 1):
+            for coin in coins:
+                
+                # if coin can be used
+                if i - coin >= 0:
+                    
+                    # take coin + solve remaining
+                    dp[i] = min(dp[i], 1 + dp[i - coin])
+        
+        # if still infinity → not possible
+        return dp[amount] if dp[amount] != float('inf') else -1
