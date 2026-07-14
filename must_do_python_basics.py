@@ -157,3 +157,7 @@ def find_largest(arr):
 def reverse_list(arr):
     # Method 1: Slicing (Creates new list)
     return arr[::-1]
+
+def is_sorted(arr):
+    # Method 1: Using built-in (Pythonic)
+    return arr == sorted(arr)
