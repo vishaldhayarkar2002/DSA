@@ -161,3 +161,31 @@ def reverse_list(arr):
 def is_sorted(arr):
     # Method 1: Using built-in (Pythonic)
     return arr == sorted(arr)
+
+# Functions as arguments (for DSA callbacks)
+def apply_operation(arr, operation):
+    return [operation(x) for x in arr]
+
+def square(x): return x*x
+result = apply_operation([1,2,3], square)  # [1,4,9]
+
+# Functions as returns (closure)
+def make_multiplier(n):
+    def multiplier(x): return x * n
+    return multiplier
+
+times2 = make_multiplier(2)
+print(times2(5))  # 10
+
+def print_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+print_info(name="Alice", age=30)
+# Output:
+# name: Alice
+# age: 30
+
+lst = ["Python", "Java", "C++"]
+
+print("-".join(lst))
